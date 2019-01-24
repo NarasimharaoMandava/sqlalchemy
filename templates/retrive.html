@@ -1,0 +1,24 @@
+<body>
+<center>
+<h2>User Data</h2>
+<hr/>
+<table border="1">
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Age</th>
+</tr>
+{% for i in details%}
+	<tr>
+	<td>{{ i.sno }}</td>
+	<td>{{ i.user_name }}</td>
+	<td>{{ i.user_email }}</td>
+	<td>{{ i.user_age }}</td>
+	</tr>
+{% endfor %}
+</table><br>
+Add user data by clicking <a href="/insert">here</a><br>
+Update user data by clicking <a href="/update">here</a>
+</center>
+</body>

@@ -1,0 +1,17 @@
+<body>
+<h2>Edit the below user details to update</h2>
+<hr/>
+<form action="/save_updates" method="POST">
+{% for i in data %}
+	<label for ="userid">User_Id</label><br>
+	<input type="text" name="uid" value="{{ i.sno}}"><br><br>
+	<label for ="username">User_Name</label><br>
+	<input type="text" name="uname" value="{{ i.user_name}}"><br><br>
+	<label for ="useremail">User_Email</label><br>
+	<input type="text" name="email" value="{{ i.user_email}}"><br><br>
+	<label for ="userage">User_Age</label><br>
+	<input type="text" name="age" value="{{ i.user_age}}"><br><br>
+	<input type="submit" value="Update">
+{% endfor %}
+</from>
+</body>
